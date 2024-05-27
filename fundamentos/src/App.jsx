@@ -1,15 +1,11 @@
-import { useState } from "react";
-import FirstComponent from "./component/FirstComponent";
+import { FirstComponent } from "./component/FirstComponent";
+import { soma } from "./component/math";
 
-import "./App.css";
-
-function App() {
+export function App() {
   return (
     <div>
       <h1>Fundamentos React</h1>
-      <FirstComponent/>
+      <FirstComponent />
     </div>
   );
 }
-
-export default App;
