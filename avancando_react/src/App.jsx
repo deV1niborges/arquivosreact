@@ -4,8 +4,12 @@ import { ManageData } from "./components/ManageData";
 import { ListRender } from "./components/ListRender";
 import { ConditionalRender } from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
+import { useState } from "react";
 
 export function App() {
+  const name = "Joaquim";
+  const [userName] = useState("Maria");
+
   return (
     <div className="App">
       <h1>Avançando em React</h1>
@@ -20,7 +24,7 @@ export function App() {
       <ManageData />
       <ListRender />
       <ConditionalRender />
-      <ShowUserName />
+      <ShowUserName name= {userName}/>
     </div>
   );
 }
