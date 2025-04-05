@@ -13,6 +13,7 @@ import ExecuteFunction from "./components/ExecuteFunction";
 import Message from "./components/Message";
 import ChangeMessageState from "./components/ChangeMessageState";
 import UserDetails from "./desafios/UserDetails";
+import Challenge from "./desafios/Challenge";
 
 export function App() {
   // const name = "Joaquim";
@@ -24,11 +25,11 @@ export function App() {
     { id: 3, brand: "Renault", color: "Preto", newCar: false, km: 234 },
   ];
 
-  const arraysOBJ = [
-    { id: 1, nome: "Emili", idade: 20, profissao: "Administradora" },
-    { id: 2, nome: "Vini", idade: 20, profissao: "Desenvolvedor" },
-    { id: 3, nome: "Noelle", idade: 20, profissao: "Arquiteta" },
-  ];
+  // const arraysOBJ = [
+  //   { id: 1, nome: "Emili", idade: 20, profissao: "Administradora" },
+  //   { id: 2, nome: "Vini", idade: 20, profissao: "Desenvolvedor" },
+  //   { id: 3, nome: "Noelle", idade: 20, profissao: "Arquiteta" },
+  // ];
 
   function showMessage() {
     console.table("Evento do componente pai!");
@@ -84,14 +85,7 @@ export function App() {
       <Message msg={message} />
       <ChangeMessageState handleMessage={handleMessage} />
       {/* desafio */}
-      {arraysOBJ.map((arrayOBJ) => (
-        <UserDetails
-          key={arrayOBJ.id}
-          nome={arrayOBJ.nome}
-          idade={arrayOBJ.idade}
-          profissao={arrayOBJ.profissao}
-        />
-      ))}
+      <Challenge />
     </div>
   );
 }
